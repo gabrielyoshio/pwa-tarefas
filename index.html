@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TaskFlow — Lista de Tarefas</title>
+  <meta name="description" content="Lista de tarefas com suporte offline" />
+
+  <!-- Cor da barra de status no celular -->
+  <meta name="theme-color" content="#7c3aed" />
+
+  <!-- Configurações para iOS/Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="TaskFlow" />
+
+  <!-- Liga o manifest (instalação da PWA) -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Liga o CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon">✓</div>
+      <h1>Task<span>Flow</span></h1>
+    </div>
+    <span id="online-badge" class="status-badge">🟢 Online</span>
+  </header>
+
+  <main>
+
+    <!-- Campo para adicionar tarefa -->
+    <div class="input-row">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="Adicionar nova tarefa..."
+        maxlength="200"
+        autocomplete="off"
+      />
+      <button id="add-btn">Adicionar</button>
+    </div>
+
+    <!-- Lista de tarefas -->
+    <ul id="task-list"></ul>
+
+    <!-- Aparece quando não há tarefas -->
+    <p id="empty-state">Nenhuma tarefa ainda. Adicione uma acima!</p>
+
+  </main>
+
+  <!-- Liga o JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
